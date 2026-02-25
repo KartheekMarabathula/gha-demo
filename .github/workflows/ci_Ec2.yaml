@@ -30,6 +30,6 @@ jobs:
               docker pull karthiq18/demo-app:${GITHUB_SHA:0:7}
               docker stop demo-app || true
               docker rm demo-app || true
-              docker run -d -p 80:5000 --name demo-app karthiq18/demo-app:${ GITHUB_SHA:0:7 }
+              docker run -d -p 80:5000 --name demo-app karthiq18/demo-app:${GITHUB_SHA:0:7}
               
             
