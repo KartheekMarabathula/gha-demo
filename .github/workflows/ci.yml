@@ -6,10 +6,10 @@ on:
       - main
       
 jobs:
-  Build and push image:
+  Build-and-push-image:
     runs-on: ubuntu-latest
     steps:
         - name: checkout code
           uses: actions/checkout@v6
         - name: Build Docker Image
-          uses: " docker build -t karthiq18/demo-app:{{ $GITHUB_SHA : : 7  . }}"
+          run: "docker build -t karthiq18/demo-app:${GITHUB_SHA :: 7 } . "
