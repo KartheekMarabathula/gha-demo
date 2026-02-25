@@ -19,4 +19,4 @@ jobs:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
         - name: push docker image to docker hub
-          run: docker push karthik18/demo-app:${GITHUB_SHA:0:7}
+          run: docker push karthiq18/demo-app:${GITHUB_SHA:0:7}
